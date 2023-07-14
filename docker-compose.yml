@@ -1,6 +1,10 @@
 version: '3'
 services:
   tizen:
+    ulimits:
+      nofile:
+        soft: 4194304
+        hard: 4194304
     privileged: true
     build: 
       context: tizen-ide
